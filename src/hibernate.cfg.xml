@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+     <session-factory>
+
+        <!-- conexao mysql --> 
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ErgaOmnes</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Root_1234</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+         
+         
+        <!-- conexao postgresql
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql:teste</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">12345</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        -->
+        
+        <!-- 
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:hsql://localhost/flex</property>
+        <property name="connection.username">SA</property>
+        <property name="connection.password"></property>
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+         -->        
+
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        
+     	<property name="connection.useUnicode">true</property> 
+        <property name="connection.characterEncoding">UTF-8</property>        
+        <property name="current_session_context_class">thread</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		     
+
+	   <property name="javax.persistence.validation.group.pre-persist">javax.validation.groups.Default</property>
+       <property name="javax.persistence.validation.group.pre-update">javax.validation.groups.Default</property>
+       <property name="javax.persistence.validation.group.pre-remove"></property>		     
+		     
+    	<!-- Usuário -->
+        <mapping class="edu.fae.model.Usuario"/>
+        <mapping class="edu.fae.model.Grupo"/>
+        <mapping class="edu.fae.model.Acao"/>
+        <mapping class="edu.fae.model.Recurso"/>
+        
+        <mapping class="edu.fae.model.Aluno"/>
+        <mapping class="edu.fae.model.Anotacao"/>
+        <mapping class="edu.fae.model.AreaEnsino"/>
+        <mapping class="edu.fae.model.Avaliacao"/>
+        <mapping class="edu.fae.model.Certificado"/>
+        <mapping class="edu.fae.model.Compra"/>
+        <mapping class="edu.fae.model.ContraOTempo"/>
+        <mapping class="edu.fae.model.Curso"/>
+        <mapping class="edu.fae.model.Desafio"/>
+        <mapping class="edu.fae.model.Docente"/>
+        <mapping class="edu.fae.model.Financeiro"/>
+        <mapping class="edu.fae.model.Funcionario"/>
+        <mapping class="edu.fae.model.Game"/>
+        <mapping class="edu.fae.model.Item"/>
+        <mapping class="edu.fae.model.ItemPedido"/>
+        <mapping class="edu.fae.model.Log"/>
+        <mapping class="edu.fae.model.Matricula"/>
+        <mapping class="edu.fae.model.PagSeguro"/>
+        <mapping class="edu.fae.model.Pedido"/>
+        <mapping class="edu.fae.model.Personagem"/>
+        <mapping class="edu.fae.model.Relacionamento"/>
+        <mapping class="edu.fae.model.SugerirQuestao"/>
+        <mapping class="edu.fae.model.Tutoria"/>
+        <mapping class="edu.fae.model.UnidadeEstudo"/>
+        <mapping class="edu.fae.model.Visitante"/>
+        <mapping class="edu.fae.model.Imagem"/>
+        <mapping class="edu.fae.model.Produto"/>
+        <mapping class="edu.fae.model.Categoria"/>
+        <mapping class="edu.fae.model.GrauEscolaridade"/>
+        <mapping class="edu.fae.model.UnidadeFederativa"/>
+        <mapping class="edu.fae.model.EstadoCivil"/>
+        <!--  
+        <mapping class="edu.fae.model.CarrinhoCompra"/>
+        <mapping class="edu.fae.model.ItemCarrinho"/>
+       -->
+<!-- 
+       <event type="pre-update">
+         <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+       </event>
+       <event type="pre-insert">
+         <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+       </event>
+       <event type="pre-delete">
+         <listener class="org.hibernate.cfg.beanvalidation.BeanValidationEventListener"/>
+       </event>
+ -->       	        
+        
+      </session-factory>
+</hibernate-configuration>
+
+

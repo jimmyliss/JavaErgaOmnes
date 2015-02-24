@@ -1,0 +1,88 @@
+/* Usuario */
+
+INSERT INTO `recurso` (`id`, `nome`, `pagina`) VALUES
+(1, 'Usuario Lista', 'usuario.jsf'),
+(2, 'Usuario Form', 'usuarioFormulario.jsf'),
+(3, 'Recurso Lista', 'recurso.jsf'),
+(4, 'Recurso Formulario', 'recursoFormulario.jsf'),
+(5, 'Main', 'main.jsf'),
+(6, 'Produtos', 'produto.jsf'),
+(7, 'Grupo', 'grupo.jsf'),
+(8, 'Grupo Formulario', 'grupoFormulario.jsf'),
+(9, 'Aluno Lista', 'aluno.jsf'),
+(10, 'Aluno Form', 'alunoFormulario.jsf'),
+(11, 'Grau de Escolaridade Lista', 'grauEscolaridade.jsf'),
+(12, 'Grau de Escolaridade Form', 'grauEscolaridadeFormulario.jsf');
+
+INSERT INTO `acao` (`id`, `codigo`, `nome`, `recurso_id`) VALUES
+(1, 'listar', 'Listar', 1),
+(2, 'excluir', 'Excluir', 1),
+(3, 'salvar', 'Salvar', 2),
+(4, 'listar', 'Listar', 3),
+(5, 'excluir', 'Excluir', 3),
+(6, '', 'Salvar', 4),
+(7, 'acessar', 'Acessar', 5),
+(8, 'listar', 'Listar', 6),
+(11, 'acessar', 'Acessar', 7),
+(12, 'acessar', 'acessar', 8)
+(13, 'listar', 'Listar', 9),
+(14, 'excluir', 'Excluir', 9),
+(15, 'salvar', 'Salvar', 10),
+(16, 'listar', 'Listar', 11),
+(17, 'excluir', 'Excluir', 11),
+(18, 'salvar', 'Salvar', 12);
+
+INSERT INTO `grupo` (`id`, `nome`) VALUES 
+(1, 'Administradores'),
+(2, 'Secretarias'),
+(3, 'Alunos');
+
+INSERT INTO `grupo_acao` (`Grupo_id`, `acoes_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(1, 6),
+(1, 7),
+(1, 11),
+(1, 12),
+(1, 13),
+(1, 14),
+(1, 15),
+(1, 16),
+(1, 17),
+(1, 18),
+(2, 7),
+(2, 8),
+(3, 15);
+
+
+
+INSERT INTO `usuario` (`id`, `email`, `nome`, `senha`, `username`) VALUES
+(1, 'jimmy.liss@bomjesus.br', 'Jimmy Liss', '81dc9bdb52d04dc20036dbd8313ed055', 'jimmyliss'),
+(2, 'ssss@email.com', 'Secretaria 1', '827ccb0eea8a706c4c34a16891f84e7b', 'secretaria1');
+
+INSERT INTO `usuario_grupo` (`usuarios_id`, `grupos_id`) VALUES
+(1, 1),
+(2, 2);
+
+/* Unidades Federativas */
+INSERT INTO `ErgaOmnes`.`UnidadeFederativa` (`nome`, `sigla`) VALUES
+("Paran�", "PR"),
+("Santa Catarina", "SC");
+
+/* Area de Ensino */
+INSERT INTO `ErgaOmnes`.`AreaEnsino` (`nome`) VALUES
+("TI"),
+("Humanas"),
+("Sa�de");
+
+/* Grau de Escolaridade */
+INSERT INTO `ErgaOmnes`.`GrauEscolaridade` (`descricao`, `sigla`) VALUES
+('Fundamental Incompleto', 'FI'),
+('Fundamental Completo', 'FC'),
+('M�dio Incompleto', 'MI'),
+('M�dio Completo', 'MC'),
+('Superior Incompleto', 'SI'),
+('Superior Completo', 'SC');
